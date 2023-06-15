@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="estilo.css">
+</head> 
+
+
+<body>
+
+    <header class="container-fluid color1">
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-lg-6">
+                     <div class="logo">
+                         <h1>BS</h1>
+                    </div>
+                </div>
+                <!--<div class="col-lg-6 d-flex align-items-center d-flex justify-content-end">
+                    <form action="">
+                        <input type="search" name="" id="">
+                    </form>
+                </div>-->
+                
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+            <!--navbar-expand-lg ES HASTA DONDE ESTE NAV VA A SER RESPONSIVE-->
+            <div class="container">
+              
+                <!--LOGO DE LA NAVBAR
+                    <a class="navbar-brand" href="#">Navbar</a>-->
+              
+                <!--BOTÓN DEL MENÚ-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <!--LOS TARGET Y LOS ID ES NECESARIO CAMBIARLOS YA QUE BOOTSTRAP USA LAS MISMAS TARGET A VECES. CUANDO EL COMPONENTE SE USA UNA SOLA VEZ, NO ES NECESARIO, SINO SI. PERO ACORDATE QUE SI SE CAMBIA UN TARGET HAY QUE CAMBIAR EL ID PORQUE EL ID VA A PODER CUMPLIR SU FUNCIÓN Y ESTILO CUANDO ESTA CONECTADO CON EL TARGET, POR ENDE, DEBEN TENER EL MISMO NOMBRE-->
+
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <!--CONTENIDO DEL MENÚ-->
+              <div class="collapse navbar-collapse" id="navbarNav">
+               
+                <!--PARA HACER UN NAV ul>li>a-->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">NOTICIAS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DISCOGRÁFICA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">STORE</a>
+                  </li>
+                  <li class="nav-item">
+                    <!--CON ESTA CLASE SE PUEDE DESABILITAR DICHO ELEMENTO DE LA LISTA-->
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </header>
+
+
+    <div class="subheader container-fluid color2 p-3">
+    </div>
+
+
+    <!--CAROUSEL-->
+    <div class="slider color3 mb-5 h-200">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <!--INDICATORS-->
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+            </div>
+
+            <!--CONTENIDO DEL CAROUSEL-->
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="slide1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>OFERTA CARIBE</h5>
+                        </div>
+                        <div class="col-6">
+                            <p>Viaja a los mejores destinos de playa de América</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <!--ES MUY IMPOTANTE RELACIONAR LOS ITEMS CON LOS INDICATORS PORQUE VAMOS A PODER PASAR CADA SLIDER DEPENDIENDO DE LA CANTILIDAD DE BUTTONS QUE TENEMOS-->
+
+              <div class="carousel-item">
+                <img src="slide2.jpg" class="d-block w-100" alt="...">
+              </div>
+
+              <div class="carousel-item">
+                <img src="slide3.jpg" class="d-block w-100" alt="...">
+              </div>
+
+              <div class="carousel-item">
+                <img src="slide4.jpg" class="d-block w-100" alt="...">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <section class="container-fluid bg-white mt-5">
+       
+        <div class="container">
+
+            <div class="row gx-5 gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="noticia">
+                        <div class="noticia-img">
+                            <img class="img-fluid" src="IMG-20230604-WA0034.jpg" alt="">
+                        </div>
+                        <div class="noticia-content">
+                            <h2>
+                                Titulo
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati cum dolorem a voluptas nemo nisi aut repudiandae sequi voluptatem nihil totam adipisci repellendus consequatur vel nam labore, officia sit!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="noticia">
+                        <div class="noticia-img">
+                            <img class="img-fluid" src="IMG-20230604-WA0034.jpg" alt="">
+                        </div>
+                        <div class="noticia-content">
+                            <h2>
+                                Titulo
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati cum dolorem a voluptas nemo nisi aut repudiandae sequi voluptatem nihil totam adipisci repellendus consequatur vel nam labore, officia sit!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="noticia">
+                        <div class="noticia-img">
+                            <img class="img-fluid" src="IMG-20230604-WA0034.jpg" alt="">
+                        </div>
+                        <div class="noticia-content">
+                            <h2>
+                                Titulo
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati cum dolorem a voluptas nemo nisi aut repudiandae sequi voluptatem nihil totam adipisci repellendus consequatur vel nam labore, officia sit!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+            <div class="col-12 bg-body-secondary p-5 mt-4"></div>  
+        
+        </div>
+
+    </section>
+
+    <section id="info" class="container-fluid mt-3 bg-dark">
+        <div class="container p-5">
+
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-danger-subtle">
+        <div class="copyright text-center p-3">
+            <p class="mb-0">
+                2023 <i class="bi bi-c-circle"></i> - Derechos Reservados <br> <a href="">Universidad de Palermo</a>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
